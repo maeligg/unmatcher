@@ -1,0 +1,139 @@
+<script>
+    import Filters from './Filters.svelte';
+    import { onDestroy, getContext } from 'svelte';
+
+    const { open } = getContext('simple-modal');
+
+    export let items;
+    export let currentStep;
+    export let goToNextStep;
+    export let updateSelectedItem;
+    export let excludeFromRandomPool;
+
+
+    let randomInterval;
+    let inactiveItemNames = localStorage.getItem('inactiveItemNames') ? localStorage.getItem('inactiveItemNames').split(',') : [];
+
+    const updateInactiveItemNames = (name) => {
+        if (inactiveItemNames.includes(name)) {
+            inactiveItemNames = inactiveItemNames.filter(inactiveItemName => inactiveItemName !== name);
+            localStorage.setItem('inactiveItemNames', inactiveItemNames);
+        } else {
+            inactiveItemNames = [...inactiveItemNames, name];
+            localStorage.setItem('inactiveItemNames', inactiveItemNames);
+        }
+    }
+
+    const getRandomItem = () => {
+        let pool = items;
+
+        if (inactiveItemNames.length) {
+            pool = pool.filter(item => !inactiveItemNames.includes(item.name));
+        }
+
+        if (excludeFromRandomPool) {
+            pool = pool.filter(item => item !== excludeFromRandomPool);
+        }
+
+		return pool[Math.floor(Math.random() * pool.length)];
+	};
+
+    onDestroy(() => clearInterval(randomInterval));
+</script>
+
+<div class="picker-wrapper">
+    <ul class="picker">
+        <li class="item random">
+            <button
+                class="{currentStep === 'player1Choses' ? 'p1' : currentStep === 'player2Choses' ? 'p2' : 'board'}"
+                on:mouseenter={() => {
+                    randomInterval = setInterval(() => {
+                        const item = getRandomItem();
+                        updateSelectedItem(item, currentStep === 'player2Choses');
+                    }, 100);
+                }}
+                on:mouseleave={() => {clearInterval(randomInterval)}}
+                on:click={() => {
+                    const item = getRandomItem();
+                    updateSelectedItem(item, currentStep === 'player2Choses');
+                    clearInterval(randomInterval);
+                    goToNextStep();
+                }}
+            >?</button>
+        </li>
+        {#each items as item}
+            {#if inactiveItemNames.indexOf(item.name) === -1}
+                <li class="item">
+                    <button
+                    class="{currentStep === 'player1Choses' ? 'p1' : currentStep === 'player2Choses' ? 'p2' : 'board'}"
+                        on:click={() => {
+                            updateSelectedItem(item, currentStep === 'player2Choses');
+                            goToNextStep();
+                        }}
+                        on:mouseover={() => { updateSelectedItem(item, currentStep === 'player2Choses') }}
+                    >
+                        <img src="{item.imageSmall || item.image}" alt="{item.name}" />
+                    </button>
+                </li>
+            {/if}
+        {/each}
+    </ul>
+    <button on:click={() => { open(Filters, {items: items, inactiveItemNames: inactiveItemNames, updateInactiveItemNames: updateInactiveItemNames}) }} class="button-primary small">Filter</button>
+</div>
+
+<style>
+    .picker-wrapper {
+        margin: auto 0 20px;
+        text-align: center;
+    }
+
+    .picker {
+        max-width: 800px;
+        margin: 0 auto 20px;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .picker > * {
+        margin: 8px;
+    }
+
+    .item {
+        list-style: none;
+    }
+
+    .item button {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .item.random button {
+        height: 80px;
+        width: 80px;
+        font-size: 60px;
+        background-color: var(--c-grey-700);
+        color: var(--c-white);
+    }
+
+    .item button.p1:hover {
+        outline: 6px solid var(--c-red);
+    }
+
+    .item button.p2:hover {
+        outline: 6px solid var(--c-blue);
+    }
+
+    .item button.board:hover {
+        outline: 6px solid var(--c-white);
+    }
+
+    .item img {
+        width: 80px;
+    }
+</style>
