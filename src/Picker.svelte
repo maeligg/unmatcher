@@ -78,7 +78,12 @@
             {/if}
         {/each}
     </ul>
-    <button on:click={() => { open(Filters, {items: items, inactiveItemNames: inactiveItemNames, updateInactiveItemNames: updateInactiveItemNames}) }} class="button-primary small">Filter</button>
+    <div>
+        {#if currentStep !== 'player1Choses'}
+            <button class="button-secondary small" on:click={() => goToNextStep(true)}>← Back</button>
+        {/if}
+        <button on:click={() => { open(Filters, {items: items, inactiveItemNames: inactiveItemNames, updateInactiveItemNames: updateInactiveItemNames}) }} class="button-primary small">Filter</button>
+    </div>
 </div>
 
 <style>

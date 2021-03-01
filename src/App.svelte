@@ -18,8 +18,16 @@
 	let p2Character;
 	let selectedBoard;
 
-	const goToNextStep = () => {
-		currentStep = allSteps[allSteps.indexOf(currentStep) + 1];
+	const goToNextStep = (reverse) => {
+		if (reverse) {
+			if (currentStep === 'choseBoard') {
+				selectedBoard = null;
+			} else if (currentStep === 'player2Choses') {
+				p2Character = null;
+			}
+		} 
+
+		currentStep = reverse ? allSteps[allSteps.indexOf(currentStep) -1] : allSteps[allSteps.indexOf(currentStep) + 1];
 	};
 
 	const resetAll = () => {
