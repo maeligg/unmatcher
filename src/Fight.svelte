@@ -64,7 +64,6 @@
 	}
 
     h2 {
-        margin-bottom: 0;
         text-align: center;
     }
 
@@ -95,7 +94,7 @@
     }
 
     .actions {
-        margin-top: 3rem;
+        margin: 30px 0;
         display: flex;
         flex-direction: column;
     }
