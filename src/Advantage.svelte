@@ -9,19 +9,19 @@
     {#await winLoss}
         Awaiting win/loss data...
     {:then data}
-        {#if data[p1Character.name][p2Character.name] > 60}
+        {#if data[p1Character.name][p2Character.name] >= 60}
             ◀◀
-        {:else if data[p1Character.name][p2Character.name] > 55}
+        {:else if data[p1Character.name][p2Character.name] >= 55}
             ◀
         {/if}
 
-        {#if data[p1Character.name][p2Character.name] > 55 || data[p1Character.name][p2Character.name] < 45}
+        {#if data[p1Character.name][p2Character.name] >= 55 || data[p1Character.name][p2Character.name] <= 45}
             advantage
         {/if}
 
-        {#if data[p1Character.name][p2Character.name] < 45}
+        {#if data[p1Character.name][p2Character.name] <= 45}
             ▶
-        {:else if data[p1Character.name][p2Character.name] < 40}
+        {:else if data[p1Character.name][p2Character.name] <= 40}
             ▶▶
         {/if}
     {/await}
