@@ -74,17 +74,16 @@
 		font-size: 100px;
 	}
 
-    @media (min-width: 600px) {
-        .character-preview-placeholder {
-            height: 320px;
-	    }
-    }
-
 	.player-preview {
-        min-height: 225px;
 		width: calc(50% - 60px);
 		text-align: center;
 	}
+
+    @media (min-width: 600px) {
+        .player-preview {
+            min-height: 275px;
+        }
+    }
 
     .versus {
         width: 60px;

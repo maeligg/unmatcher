@@ -24,6 +24,7 @@
 
 <style>
     .preview {
+        min-height: 275px;
         text-align: center;
     }
 
