@@ -1,6 +1,7 @@
 <script>
     import Filters from './Filters.svelte';
     import { onDestroy, getContext } from 'svelte';
+    import { inactiveItemsStore } from './stores/inactiveItems';
 
     const { open } = getContext('simple-modal');
 
@@ -12,15 +13,13 @@
 
 
     let randomInterval;
-    let inactiveItemNames = localStorage.getItem('inactiveItemNames') ? localStorage.getItem('inactiveItemNames').split(',') : [];
+    let inactiveItemNames = $inactiveItemsStore ? $inactiveItemsStore.split(',') : [];
 
     const updateInactiveItemNames = (name) => {
         if (inactiveItemNames.includes(name)) {
             inactiveItemNames = inactiveItemNames.filter(inactiveItemName => inactiveItemName !== name);
-            localStorage.setItem('inactiveItemNames', inactiveItemNames);
         } else {
             inactiveItemNames = [...inactiveItemNames, name];
-            localStorage.setItem('inactiveItemNames', inactiveItemNames);
         }
     }
 
