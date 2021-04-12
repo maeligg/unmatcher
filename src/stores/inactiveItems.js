@@ -1,3 +1,3 @@
 import {persistStore} from './persistStore';
 
-export const inactiveItemsStore = persistStore('inactiveItems', '');
+export const inactiveItemsStore = persistStore('inactiveItemNames', '');

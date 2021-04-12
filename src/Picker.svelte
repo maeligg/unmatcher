@@ -13,21 +13,22 @@
 
 
     let randomInterval;
-    let inactiveItemNames = $inactiveItemsStore ? $inactiveItemsStore.split(',') : [];
+
+    console.log($inactiveItemsStore)
 
     const updateInactiveItemNames = (name) => {
-        if (inactiveItemNames.includes(name)) {
-            inactiveItemNames = inactiveItemNames.filter(inactiveItemName => inactiveItemName !== name);
+        if ($inactiveItemsStore.includes(name)) {
+            $inactiveItemsStore = $inactiveItemsStore.filter(inactiveItemName => inactiveItemName !== name);
         } else {
-            inactiveItemNames = [...inactiveItemNames, name];
+            $inactiveItemsStore = [...$inactiveItemsStore, name];
         }
     }
 
     const getRandomItem = () => {
         let pool = items;
 
-        if (inactiveItemNames.length) {
-            pool = pool.filter(item => !inactiveItemNames.includes(item.name));
+        if ($inactiveItemsStore.length) {
+            pool = pool.filter(item => !$inactiveItemsStore.includes(item.name));
         }
 
         if (excludeFromRandomPool) {
@@ -61,7 +62,7 @@
             >?</button>
         </li>
         {#each items as item}
-            {#if inactiveItemNames.indexOf(item.name) === -1}
+            {#if $inactiveItemsStore.indexOf(item.name) === -1}
                 <li class="item">
                     <button
                     class="{currentStep === 'player1Choses' ? 'p1' : currentStep === 'player2Choses' ? 'p2' : 'board'}"
@@ -81,7 +82,7 @@
         {#if currentStep !== 'player1Choses'}
             <button class="button-secondary small" on:click={() => goToNextStep(true)}>← Back</button>
         {/if}
-        <button on:click={() => { open(Filters, {items: items, inactiveItemNames: inactiveItemNames, updateInactiveItemNames: updateInactiveItemNames}) }} class="button-primary small">Filter</button>
+        <button on:click={() => { open(Filters, {items: items, inactiveItemNames: $inactiveItemsStore, updateInactiveItemNames: updateInactiveItemNames}) }} class="button-primary small">Filter</button>
     </div>
 </div>
 
