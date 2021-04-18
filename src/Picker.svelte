@@ -14,8 +14,6 @@
 
     let randomInterval;
 
-    console.log($inactiveItemsStore)
-
     const updateInactiveItemNames = (name) => {
         if ($inactiveItemsStore.includes(name)) {
             $inactiveItemsStore = $inactiveItemsStore.filter(inactiveItemName => inactiveItemName !== name);
