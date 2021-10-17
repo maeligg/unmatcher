@@ -58,6 +58,12 @@ const boards = [
         image: "img/boards/heorot.jpg",
         imageSmall: "img/boards/heorot-small.jpg",
         set: "Little Red Riding Hood vs. Beowulf",
+    },
+    {
+        name: "Hanging Gardens",
+        image: "img/boards/hanging-gardens.jpg",
+        imageSmall: "img/boards/hanging-gardens-small.jpg",
+        set: "Battle of Legends, Volume 2",
     }
 ]
 

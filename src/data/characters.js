@@ -93,6 +93,31 @@ const characters = [
         name: "Little Red Riding Hood",
         image: "img/characters/Red.jpg",
         set: "Little Red Riding Hood vs. Beowulf",
+    },
+    {
+        name: "Deadpool",
+        image: "img/characters/Deadpool.jpg",
+        set: "Deadpool",
+    },
+    {
+        name: "Achiles",
+        image: "img/characters/Achiles.jpg",
+        set: "Battle of Legends, Volume 2",
+    },
+    {
+        name: "Bloody Mary",
+        image: "img/characters/Bloody_Mary.jpg",
+        set: "Battle of Legends, Volume 2",
+    },
+    {
+        name: "Sun Wukong",
+        image: "img/characters/Sun_Wukong.jpg",
+        set: "Battle of Legends, Volume 2",
+    },
+    {
+        name: "Yennenga",
+        image: "img/characters/Yennenga.jpg",
+        set: "Battle of Legends, Volume 2",
     }
 ]
 
