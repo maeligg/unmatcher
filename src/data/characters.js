@@ -100,7 +100,7 @@ const characters = [
         set: "Deadpool",
     },
     {
-        name: "Achiles",
+        name: "Achilles",
         image: "img/characters/Achiles.jpg",
         set: "Battle of Legends, Volume 2",
     },
