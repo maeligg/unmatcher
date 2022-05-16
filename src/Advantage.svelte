@@ -13,13 +13,7 @@
             ◀◀
         {:else if data[p1Character.name][p2Character.name] >= 55}
             ◀
-        {/if}
-
-        {#if data[p1Character.name][p2Character.name] >= 55 || data[p1Character.name][p2Character.name] <= 45}
-            advantage
-        {/if}
-
-        {#if data[p1Character.name][p2Character.name] <= 45}
+        {:else if data[p1Character.name][p2Character.name] <= 45}
             ▶
         {:else if data[p1Character.name][p2Character.name] <= 40}
             ▶▶
@@ -30,17 +24,19 @@
 
 <style>
     .advantage {
-        margin-bottom: 1rem;
-        min-height: 3rem;
+        margin-top: 1rem;
         text-align: center;
         text-transform: uppercase;
-        font-size: 1.6rem;
+        line-height: 1;
+        font-size: 3rem;
+        min-height: 3rem;
         color: var(--c-yellow);
     }
 
     @media (min-width: 600px) {
         .advantage {
-            font-size: 2rem;
+            font-size: 4rem;
+            min-height: 4rem;
         }
     }
 </style>

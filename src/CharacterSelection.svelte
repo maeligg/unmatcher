@@ -22,7 +22,10 @@
             <div class="character-preview-placeholder">?</div>
         {/if}
     </div>
-    <img src="/img/vs.svg" alt="versus" class="versus">
+    <div class="middle-section">
+        <img src="/img/vs.svg" alt="versus" class="versus">
+        <Advantage winLoss={winLoss} p1Character={p1Character} p2Character={p2Character} />
+    </div>
     <div class="player-preview">
         {#if p2Character}
             <img src="{p2Character.image}" alt="{p2Character.name}" class="preview-image">
@@ -32,8 +35,6 @@
         {/if}
     </div>
 </div>
-
-<Advantage winLoss={winLoss} p1Character={p1Character} p2Character={p2Character} />
 
 <Picker items={characters} currentStep={currentStep} goToNextStep={goToNextStep} updateSelectedItem={updateSelectedCharacter} excludeFromRandomPool={p1Character} />
 
@@ -58,13 +59,12 @@
     .preview-image {
         margin: 0 auto;
         max-width: 100%;
-        background-size: contain;
-        mask-image: url(../img/mask.svg);
-        -webkit-mask-image: url(../img/mask.svg);
-        mask-size: contain;
-        -webkit-mask-size: contain;
-        mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
+        max-height: 300px;
+        border-radius: 4px;
+    }
+
+    h2 {
+        margin: 0;
     }
 
 	.character-preview-placeholder {
@@ -81,8 +81,14 @@
 
     @media (min-width: 600px) {
         .player-preview {
-            min-height: 275px;
+            min-height: 390px;
         }
+    }
+
+    .middle-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .versus {

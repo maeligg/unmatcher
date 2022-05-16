@@ -117,7 +117,7 @@
     }
 
     .item.random button {
-        height: 80px;
+        height: 111px;
         width: 80px;
         font-size: 60px;
         background-color: var(--c-grey-700);
@@ -130,6 +130,10 @@
 
     .item button.p2:hover {
         outline: 6px solid var(--c-blue);
+    }
+
+    .item button.board {
+        height: 80px;
     }
 
     .item button.board:hover {
