@@ -114,6 +114,36 @@ const characters = [
     image: "img/characters/yennenga.jpg",
     set: "Battle of Legends, Volume 2",
   },
+  {
+    name: "Luke Cage",
+    image: "img/characters/luke-cage.jpg",
+    set: "Redemption Row",
+  },
+  {
+    name: "Ghost Rider",
+    image: "img/characters/ghost-rider.jpg",
+    set: "Redemption Row",
+  },
+  {
+    name: "Moon Knight",
+    image: "img/characters/moon-knight.jpg",
+    set: "Redemption Row",
+  },
+  {
+    name: "Daredevil",
+    image: "img/characters/daredevil.jpg",
+    set: "Hell's Kitchen",
+  },
+  {
+    name: "Elektra",
+    image: "img/characters/elektra.jpg",
+    set: "Hell's Kitchen",
+  },
+  {
+    name: "Bullseye",
+    image: "img/characters/bullseye.jpg",
+    set: "Hell's Kitchen",
+  },
 ];
 
 export default characters;
