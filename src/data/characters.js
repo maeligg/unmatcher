@@ -35,7 +35,7 @@ const characters = [
     set: "Bruce Lee",
   },
   {
-    name: "Muldoon",
+    name: "InGen",
     image: "img/characters/ingen.jpg",
     set: "Jurassic Park - Ingen vs. Raptors",
   },
@@ -70,7 +70,7 @@ const characters = [
     set: "Buffy the Vampire Slayer",
   },
   {
-    name: "Buffy",
+    name: "Buffy (Xander)",
     image: "img/characters/buffy.jpg",
     set: "Buffy the Vampire Slayer",
   },

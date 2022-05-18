@@ -4,7 +4,6 @@
 	import BoardSelection from './BoardSelection.svelte';
 	import Fight from './Fight.svelte';
 	import About from './About.svelte';
-	import getWinLoss from './data/getResultsTracking';
 
 	const allSteps = [
 		'player1Choses',
@@ -45,7 +44,13 @@
 		}
 	};
 
-	const winLoss = getWinLoss();
+	let winLoss
+	(async () => {
+		winLoss = await fetch('/matchupData.json')
+			.then(res => res.json());
+	})();
+
+	console.log(winLoss)
 </script>
 
 <main>
