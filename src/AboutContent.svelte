@@ -18,7 +18,7 @@
 </details>
 <details>
     <summary>How is the "advantage" calculated ?</summary>
-    The data is pulled live from the Unmatched <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQL4fiu_KrLgSUNJ0nTCR6OBrAybNPPMfJ1vceOEbiGD3dbbMcJqlM7nBtyZ3kCF73z5-x3UbnpQRJs/pubhtml" target="_blank" rel="noopener noreferrer">results tracking</a> spreadsheet. A win / lose rate between 45% and 55% is considered as "no advantage". A rate between 40% and 45% or between 55% and 60% is a "small advantage" (▶). Anything below 40% or above 60% is a "big advantage" (▶▶). Keep in mind the sample size is very small for some of these datasets ! Make sure to consult the full spreadsheet for details.
+    The data comes from <a href="https://www.umleague.net/" target="_blank" rel="noopener noreferrer">UM league</a>, a community for Unmatched stats and tournaments. A win / lose rate between 45% and 55% is considered as "no advantage". A rate between 40% and 45% or between 55% and 60% is a "small advantage" (▶). Anything below 40% or above 60% is a "big advantage" (▶▶). Matchups with less than 10 recorded results are considered statistically insignificant and ignored. Make sure to consult the UM league website for details.
 </details>
 <details>
     <summary>Can I use this to pair 4 players ?</summary>
