@@ -16,8 +16,8 @@
 <div class="preview">
     <div class="player-preview">
         {#if p1Character}
-            <img src="{p1Character.image}" alt="{p1Character.name}" class="preview-image">
-            <h2>{p1Character.name}</h2>
+            <img src="{p1Character.image}" alt="{p1Character.displayName || p1Character.name}" class="preview-image">
+            <h2>{p1Character.displayName || p1Character.name}</h2>
         {:else}
             <div class="character-preview-placeholder">?</div>
         {/if}
@@ -28,8 +28,8 @@
     </div>
     <div class="player-preview">
         {#if p2Character}
-            <img src="{p2Character.image}" alt="{p2Character.name}" class="preview-image">
-            <h2>{p2Character.name}</h2>
+            <img src="{p2Character.image}" alt="{p2Character.displayName || p2Character.name}" class="preview-image">
+            <h2>{p2Character.displayName || p2Character.name}</h2>
         {:else}
             <div class="character-preview-placeholder">?</div>
         {/if}
@@ -89,6 +89,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    @media (min-width: 600px) {
+        .middle-section {
+            min-width: 250px;
+        }
     }
 
     .versus {

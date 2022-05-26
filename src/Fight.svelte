@@ -67,6 +67,13 @@
     .middle-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 600px) {
+        .middle-section {
+            min-width: 250px;
+        }
     }
 
     .versus {

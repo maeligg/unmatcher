@@ -10,17 +10,21 @@
         Awaiting win/loss data...
     {:then data}
         {#if !data[p1Character.name][p2Character.name]}
-            ?
-        {:else if data[p1Character.name][p2Character.name] >= 60}
-            ◀◀
-        {:else if data[p1Character.name][p2Character.name] >= 55}
-            ◀
-        {:else if data[p1Character.name][p2Character.name] <= 45}
-            ▶
-        {:else if data[p1Character.name][p2Character.name] <= 40}
-            ▶▶
+            no data
         {:else}
-            =
+            {#if data[p1Character.name][p2Character.name] >= 60}
+                ◀◀
+            {:else if data[p1Character.name][p2Character.name] >= 55}
+                ◀
+            {:else if data[p1Character.name][p2Character.name] > 45}
+                no
+            {/if}
+            advantage
+            {#if data[p1Character.name][p2Character.name] <= 45}
+                ▶
+            {:else if data[p1Character.name][p2Character.name] <= 40}
+                ▶▶
+            {/if}
         {/if}
     {/await}
 {/if}
@@ -32,15 +36,15 @@
         text-align: center;
         text-transform: uppercase;
         line-height: 1;
-        font-size: 3rem;
-        min-height: 3rem;
+        font-size: 1rem;
+        min-height: 1rem;
         color: var(--c-yellow);
     }
 
     @media (min-width: 600px) {
         .advantage {
-            font-size: 4rem;
-            min-height: 4rem;
+            font-size: 2rem;
+            min-height: 2rem;
         }
     }
 </style>

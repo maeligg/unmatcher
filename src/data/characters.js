@@ -91,6 +91,7 @@ const characters = [
   },
   {
     name: "Little Red Riding Hood",
+    displayName: "Little Red",
     image: "img/characters/little-red.jpg",
     set: "Little Red Riding Hood vs. Beowulf",
   },
