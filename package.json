@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "node ./scripts/getMatchupData.js && rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "node ./scripts/getMatchupData.js && rollup -c -w",
     "start": "sirv public"
   },
   "devDependencies": {

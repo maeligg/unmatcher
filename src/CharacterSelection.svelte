@@ -54,6 +54,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+        gap: 20px;
 	}
 
     .preview-image {
