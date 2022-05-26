@@ -2,7 +2,7 @@
   "name": "unmatcher",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
+    "build": "node ./scripts/getMatchupData.js && rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },
@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "node-fetch": "^3.2.4",
     "sirv-cli": "^1.0.0",
     "svelte-simple-modal": "^0.8.1"

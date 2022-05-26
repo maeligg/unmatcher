@@ -25,9 +25,11 @@ const getData = async () => {
     );
   }
 
+  console.log(charactersWithResults);
+
   try {
     fs.writeFileSync(
-      "../public/matchupData.json",
+      "./scripts/matchupData.json",
       JSON.stringify(charactersWithResults)
     );
   } catch (err) {

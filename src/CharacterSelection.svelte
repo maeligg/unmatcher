@@ -8,7 +8,7 @@
     export let updateSelectedCharacter;
     export let p1Character;
     export let p2Character;
-    export let winLoss;
+    export let matchupData;
 </script>
 
 <h1 class="{currentStep === 'player1Choses' ? 'p1' : 'p2'}">Player {#if currentStep === 'player1Choses'}1{:else}2{/if}: select your fighter</h1>
@@ -24,7 +24,7 @@
     </div>
     <div class="middle-section">
         <img src="/img/vs.svg" alt="versus" class="versus">
-        <Advantage winLoss={winLoss} p1Character={p1Character} p2Character={p2Character} />
+        <Advantage matchupData={matchupData} p1Character={p1Character} p2Character={p2Character} />
     </div>
     <div class="player-preview">
         {#if p2Character}

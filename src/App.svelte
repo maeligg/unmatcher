@@ -4,6 +4,7 @@
 	import BoardSelection from './BoardSelection.svelte';
 	import Fight from './Fight.svelte';
 	import About from './About.svelte';
+	import matchupData from '../scripts/matchupData.json'
 
 	const allSteps = [
 		'player1Choses',
@@ -44,23 +45,16 @@
 		}
 	};
 
-	let winLoss
-	(async () => {
-		winLoss = await fetch('/matchupData.json')
-			.then(res => res.json());
-	})();
-
-	console.log(winLoss)
 </script>
 
 <main>
 	<Modal>
 		{#if currentStep === 'player1Choses' || currentStep === 'player2Choses'}
-			<CharacterSelection currentStep={currentStep} goToNextStep={goToNextStep} updateSelectedCharacter={updateSelectedCharacter} p1Character={p1Character} p2Character={p2Character} winLoss={winLoss} />
+			<CharacterSelection currentStep={currentStep} goToNextStep={goToNextStep} updateSelectedCharacter={updateSelectedCharacter} p1Character={p1Character} p2Character={p2Character} matchupData={matchupData} />
 		{:else if currentStep === 'choseBoard'}
 			<BoardSelection currentStep={currentStep} goToNextStep={goToNextStep} updateSelectedBoard={board => selectedBoard = board} selectedBoard={selectedBoard} />
 		{:else}
-			<Fight p1Character={p1Character} p2Character={p2Character} selectedBoard={selectedBoard} resetAll={resetAll} winLoss={winLoss} />
+			<Fight p1Character={p1Character} p2Character={p2Character} selectedBoard={selectedBoard} resetAll={resetAll} matchupData={matchupData} />
 		{/if}
 		<About />
 	</Modal>

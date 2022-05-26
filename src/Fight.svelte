@@ -5,7 +5,7 @@
     export let p2Character;
     export let selectedBoard;
     export let resetAll;
-    export let winLoss;
+    export let matchupData;
 </script>
 
 <h1>Fight !</h1>
@@ -18,7 +18,7 @@
         </div>
         <div class="middle-section">
             <img src="/img/vs.svg" alt="versus" class="versus">
-            <Advantage winLoss={winLoss} p1Character={p1Character} p2Character={p2Character} />
+            <Advantage matchupData={matchupData} p1Character={p1Character} p2Character={p2Character} />
         </div>
         <div class="player-preview">
             <img src="{p2Character.image}" alt="{p2Character.name}" class="preview-image">

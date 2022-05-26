@@ -1,5 +1,5 @@
 /node_modules/
 /public/build/
-/public/matchupData.json
+/scripts/matchupData.json
 
 .DS_Store

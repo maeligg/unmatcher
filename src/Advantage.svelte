@@ -1,12 +1,12 @@
 <script>
     export let p1Character;
     export let p2Character;
-    export let winLoss;
+    export let matchupData;
 </script>
 
 <div class="advantage">
 {#if p1Character && p2Character}
-    {#await winLoss}
+    {#await matchupData}
         Awaiting win/loss data...
     {:then data}
         {#if !data[p1Character.name][p2Character.name]}
