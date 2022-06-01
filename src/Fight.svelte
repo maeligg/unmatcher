@@ -30,7 +30,7 @@
         <img src="{selectedBoard.image}" alt="{selectedBoard.name}" class="preview-board">
         <h2>{selectedBoard.name}</h2>
         <div class="actions">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScKU4QmkKy3wy26omcov0jtDU5ORb89EeqUlbv9DTjq1X2bMA/viewform" target="_blank" rel="noopener noreferrer" class="button-primary">Log results</a>
+            <a href="https://www.umleague.net/newmatch" target="_blank" rel="noopener noreferrer" class="button-primary">Log results on UM league</a>
             <button on:click={resetAll} class="button-secondary">Rematch</button>
         </div>
     </div>
