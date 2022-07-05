@@ -145,6 +145,16 @@ const characters = [
     image: "img/characters/bullseye.jpg",
     set: "Hell's Kitchen",
   },
+  {
+    name: "T. Rex",
+    image: "img/characters/trex.jpg",
+    set: "Jurassic Park - Sattler vs. T-Rex",
+  },
+  {
+    name: "Dr. Sattler",
+    image: "img/characters/sattler.jpg",
+    set: "Jurassic Park - Sattler vs. T-Rex",
+  },
 ];
 
 export default characters;

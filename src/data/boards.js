@@ -77,6 +77,12 @@ const boards = [
     imageSmall: "img/boards/the-raft-small.jpg",
     set: "Redemption Row",
   },
+  {
+    name: "T.Rex Paddock",
+    image: "img/boards/trex-paddock.jpg",
+    imageSmall: "img/boards/trex-paddock-small.jpg",
+    set: "Jurassic Park - Sattler vs. T-Rex",
+  },
 ];
 
 export default boards;
