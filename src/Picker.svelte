@@ -9,6 +9,7 @@
   export let currentStep
   export let goToNextStep
   export let updateSelectedItem
+  export let updatePreviewItem
   export let excludeFromRandomPool
 
   let randomInterval
@@ -62,7 +63,6 @@
           const item = getRandomItem()
           updateSelectedItem(item, currentStep === 'player2Choses')
           clearInterval(randomInterval)
-          goToNextStep()
         }}>?</button
       >
     </li>
@@ -77,10 +77,12 @@
               : 'board'}
             on:click={() => {
               updateSelectedItem(item, currentStep === 'player2Choses')
-              goToNextStep()
             }}
             on:mouseover={() => {
-              updateSelectedItem(item, currentStep === 'player2Choses')
+              updatePreviewItem(item, currentStep === 'player2Choses')
+            }}
+            on:focus={() => {
+              updatePreviewItem(item, currentStep === 'player2Choses')
             }}
           >
             <img src={item.imageSmall || item.image} alt={item.name} />
