@@ -9,7 +9,7 @@ const getData = async () => {
 
   for (const character of characters) {
     const response = await fetch(
-      `https://www.umleague.net/api/analytics/getHeroResultsByMap?hero=${character.name}`
+      `https://www.umleague.net/api/analytics/getHeroResultsByMap?campaignid=10000&organizerid=0&hero=${character.name}`
     );
     const json = await response.json();
 
