@@ -1,32 +1,59 @@
 <script>
-    export let items;
-    export let inactiveItemNames;
-    export let updateInactiveItemNames;
+  import { inactiveItemsStore } from './stores/inactiveItems'
 
-    const sets = [...new Set(items.map(item => item.set))];
+  export let items
+  export let updateInactiveItemNames
+
+  const sets = [...new Set(items.map((item) => item.set))]
 </script>
 
 {#each sets as set}
-    <h3>{set}</h3>
-    <ul>
-        {#each items as item}
-            {#if item.set === set}
-                <li class="item">
-                    <label><input type="checkbox" checked={inactiveItemNames.indexOf(item.name) === -1} on:change={() => updateInactiveItemNames(item.name)}> {item.name}</label>
-                </li>
-            {/if}
-        {/each}
-    </ul>
+  <label class="set"
+    ><input
+      type="checkbox"
+      checked={items
+        .filter((item) => item.set === set)
+        .every((item) => $inactiveItemsStore.indexOf(item.name) === -1)}
+      on:change={() => {
+        items
+          .filter((item) => item.set === set)
+          .forEach((item) => updateInactiveItemNames(item.name))
+      }}
+    />{set}</label
+  >
+  <ul>
+    {#each items as item}
+      {#if item.set === set}
+        <li class="item">
+          <label
+            ><input
+              type="checkbox"
+              checked={$inactiveItemsStore.indexOf(item.name) === -1}
+              on:change={() => updateInactiveItemNames(item.name)}
+            />
+            {item.name}</label
+          >
+        </li>
+      {/if}
+    {/each}
+  </ul>
 {/each}
 
 <style>
-    ul {
-        margin: 0;
-        padding: 1rem;
-        list-style: none;
-    }
+  .set {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+  }
 
-    .item {
-        margin-left: 20px;
-    }
+  ul {
+    margin: 0.5rem 0 1rem 0;
+    padding: 0rem;
+    list-style: none;
+  }
+
+  .item {
+    margin-left: 20px;
+  }
 </style>

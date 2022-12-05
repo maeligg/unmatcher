@@ -20,10 +20,10 @@
                 no
             {/if}
             advantage
-            {#if data[p1Character.name][p2Character.name] <= 45}
-                ▶
-            {:else if data[p1Character.name][p2Character.name] <= 40}
+            {#if data[p1Character.name][p2Character.name] <= 40}
                 ▶▶
+            {:else if data[p1Character.name][p2Character.name] <= 45}
+                ▶
             {/if}
         {/if}
     {/await}
