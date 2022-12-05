@@ -19,9 +19,14 @@
   const goToNextStep = (reverse) => {
     if (reverse) {
       if (currentStep === 'choseBoard') {
-        selectedBoard = null
-      } else if (currentStep === 'player2Choses') {
         p2Character = null
+        p2Preview = null
+        boardPreview = null
+      } else if (currentStep === 'player2Choses') {
+        p1Character = null
+        p1Preview = null
+        p2Character = null
+        p2Preview = null
       }
     }
 
