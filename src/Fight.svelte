@@ -46,7 +46,7 @@
         href="https://www.umleague.net/newmatch"
         target="_blank"
         rel="noopener noreferrer"
-        class="button-primary">Log results on UM league</a
+        class="button-primary mb-1">Log results on UM league</a
       >
       <button on:click={resetAll} class="button-secondary">Rematch</button>
     </div>

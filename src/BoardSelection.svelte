@@ -61,6 +61,8 @@
   }
 
   .confirm-selection-wrapper {
-    min-height: 66px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
   }
 </style>
