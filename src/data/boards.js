@@ -83,6 +83,12 @@ const boards = [
     imageSmall: "img/boards/trex-paddock-small.jpg",
     set: "Jurassic Park - Sattler vs. T-Rex",
   },
+  {
+    name: "King Solomon's Mine",
+    image: "img/boards/king-solomons-mine.jpg",
+    imageSmall: "img/boards/king-solomons-mine-small.jpg",
+    set: "Houdini vs. The Genie",
+  },
 ];
 
 export default boards;

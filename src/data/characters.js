@@ -96,6 +96,11 @@ const characters = [
     set: "Little Red Riding Hood vs. Beowulf",
   },
   {
+    name: "Deadpool",
+    image: "img/characters/deadpool.jpg",
+    set: "Deadpool"
+  },
+  {
     name: "Achilles",
     image: "img/characters/achilles.jpg",
     set: "Battle of Legends, Volume 2",
@@ -154,6 +159,16 @@ const characters = [
     name: "Dr. Sattler",
     image: "img/characters/sattler.jpg",
     set: "Jurassic Park - Sattler vs. T-Rex",
+  },
+  {
+    name: "Houdini",
+    image: "img/characters/houdini.jpg",
+    set: "Houdini vs. The Genie",
+  },
+  {
+    name: "The Genie",
+    image: "img/characters/genie.jpg",
+    set: "Houdini vs. The Genie",
   },
 ];
 
