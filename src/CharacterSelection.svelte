@@ -154,8 +154,8 @@
   }
 
   .confirm-selection-wrapper {
-    min-height: 80px;
+    min-height: 60px;
     display: flex;
-    align-items: center;
+    align-items: start;
   }
 </style>

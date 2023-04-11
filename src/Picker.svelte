@@ -1,9 +1,9 @@
 <script>
   import Filters from './Filters.svelte'
-  import { onDestroy, getContext } from 'svelte'
-  import { inactiveItemsStore } from './stores/inactiveItems'
+  import {onDestroy, getContext} from 'svelte'
+  import {inactiveItemsStore} from './stores/inactiveItems'
 
-  const { open } = getContext('simple-modal')
+  const {open} = getContext('simple-modal')
 
   export let items
   export let currentStep
@@ -116,13 +116,17 @@
   }
 
   .picker {
+    max-height: 600px;
     max-width: 800px;
+    width: 100%;
     margin: 0 auto 20px;
     padding: 0;
-    width: 100%;
+    overflow-y: scroll;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border-radius: 4px;
   }
 
   .picker > * {
