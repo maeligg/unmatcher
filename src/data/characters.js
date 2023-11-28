@@ -185,6 +185,56 @@ const characters = [
     image: 'img/characters/ms-marvel.jpg',
     set: 'Teen Spirit',
   },
+  {
+    name: 'Black Widow',
+    image: 'img/characters/black-widow.jpg',
+    set: 'For King and Country',
+  },
+  {
+    name: 'Black Panther',
+    image: 'img/characters/black-panther.jpg',
+    set: 'For King and Country',
+  },
+  {
+    name: 'Winter Soldier',
+    image: 'img/characters/winter-soldier.jpg',
+    set: 'For King and Country',
+  },
+  {
+    name: 'Spider-Man',
+    image: 'img/characters/spider-man.jpg',
+    set: 'Brains and Brawn',
+  },
+  {
+    name: 'She-Hulk',
+    image: 'img/characters/she-hulk.jpg',
+    set: 'Brains and Brawn',
+  },
+  {
+    name: 'Doctor Strange',
+    image: 'img/characters/doctor-strange.jpg',
+    set: 'Brains and Brawn',
+  },
+  {
+    name: 'Nikola Tesla',
+    image: 'img/characters/nikola-tesla.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
+  {
+    name: 'Dr. Jill Trent',
+    image: 'img/characters/dr-jill-trent.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
+  {
+    name: 'Golden Bat',
+    image: 'img/characters/golden-bat.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
+  {
+    name: 'Annie Christmas',
+    image: 'img/characters/annie-christmas.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
 ]
 
 export default characters

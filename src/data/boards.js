@@ -95,6 +95,30 @@ const boards = [
     imageSmall: 'img/boards/navy-pier-small.jpg',
     set: 'Teen Spirit',
   },
+  {
+    name: 'Helicarrier',
+    image: 'img/boards/helicarrier.jpg',
+    imageSmall: 'img/boards/helicarrier-small.jpg',
+    set: 'For King and Country',
+  },
+  {
+    name: 'Sanctum Sanctorum',
+    image: 'img/boards/sanctum-sanctorum.jpg',
+    imageSmall: 'img/boards/sanctum-sanctorum-small.jpg',
+    set: 'Brains and Brawn',
+  },
+  {
+    name: 'Point Pleasant',
+    image: 'img/boards/point-pleasant.jpg',
+    imageSmall: 'img/boards/point-pleasant-small.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
+  {
+    name: 'McMinnville',
+    image: 'img/boards/mcminnville.jpg',
+    imageSmall: 'img/boards/mcminnville-small.jpg',
+    set: 'Unmatched Adventures - Tales to Amaze',
+  },
 ]
 
 export default boards
