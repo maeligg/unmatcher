@@ -95,6 +95,7 @@
   }
 
   .preview {
+    margin-bottom: 10px;
     width: 100%;
     display: flex;
     justify-content: space-around;
