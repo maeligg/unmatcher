@@ -119,6 +119,12 @@ const boards = [
     imageSmall: 'img/boards/mcminnville-small.jpg',
     set: 'Unmatched Adventures - Tales to Amaze',
   },
+  {
+    name: 'Azuchi Castle',
+    image: 'img/boards/azuchi-castle.jpg',
+    imageSmall: 'img/boards/azuchi-castle-small.jpg',
+    set: "Sun's Origin",
+  },
 ]
 
 export default boards

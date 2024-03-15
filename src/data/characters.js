@@ -235,6 +235,16 @@ const characters = [
     image: 'img/characters/annie-christmas.jpg',
     set: 'Unmatched Adventures - Tales to Amaze',
   },
+  {
+    name: 'Oda Nobunaga',
+    image: 'img/characters/oda-nobunaga.jpg',
+    set: "Sun's Origin",
+  },
+  {
+    name: 'Tomoe Gozen',
+    image: 'img/characters/tomoe-gozen.jpg',
+    set: "Sun's Origin",
+  },
 ]
 
 export default characters
